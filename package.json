@@ -5,28 +5,13 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev:writer": "cross-env PHASE=development ENTRY=writer webpack serve --config ./webpack/webpack.config.js",
-    "dev:viewer": "cross-env PHASE=development ENTRY=viewer webpack serve --config ./webpack/webpack.config.js",
-    "dev:commentWriter": "cross-env PHASE=development ENTRY=commentWriter webpack serve --config ./webpack/webpack.config.js",
-    "dev:commentViewer": "cross-env PHASE=development ENTRY=commentViewer webpack serve --config ./webpack/webpack.config.js",
-    "dev:postEndVS": "cross-env PHASE=development ENTRY=postEndVS webpack serve --config ./webpack/webpack.config.js",
     "move:d.ts": "node move.d.js",
     "build": "cross-env PHASE=production webpack --config ./webpack/webpack.config.js && npm run move:d.ts",
-    "clean": "rm -rf ./dist",
-    "lint": "eslint . --ext ts,tsx,js,jsx",
-    "lint:fix": "eslint . --ext ts,tsx,js,jsx --fix",
-    "prettier": "prettier --write --config ./.prettierrc.js \"./**/*.{ts,js}\"",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "filter:xlt": "node ./i18n/xltFilter.js",
-    "update:xlt": "rm -rf i18n/resource && xlt fetch && npm run filter:xlt",
-    "typescript": "tsc --pretty"
+    "clean": "rm -rf ./dist"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.linecorp.com:LINE-FE/web-timeline-editor.git"
+    "url": "git@github.com:rlsdf/test-lib.git"
   },
   "license": "ISC",
   "dependencies": {
